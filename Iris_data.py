@@ -1,11 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 13 12:04:01 2018
-
 @author: abhinav
 """
-
 
 import numpy as np
 import pandas as pd
@@ -20,10 +14,8 @@ df
 x= df.iloc[:, : -1].values
 y= df.iloc[:, -1].values
 y
-#from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder
 x_train, x_test, y_train, y_test= train_test_split(x,y,test_size= 1/4, random_state= 0)
-
-
 
 from sklearn.tree import DecisionTreeClassifier
 classifier= DecisionTreeClassifier(random_state= 0)
@@ -33,10 +25,8 @@ type = [[7,2,5,1]]
 ypred= classifier.predict(type )
 ypred
 
-
 from sklearn.metrics import accuracy_score
 accuracy_score(ypred, y_test)
-
 
 x_grid= np.arange(min(X), max(X),0.01)
 x_grid= X_grid.reshape(len(x_grid),1)
@@ -45,4 +35,3 @@ plt.plot(x_grid, classifier.predict(x_grid),color='blue')
 plt.title('Decision Tree Classifier')
 
 plt.show()
- 
