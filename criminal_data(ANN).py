@@ -33,6 +33,6 @@ classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'si
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 classifier.fit(X, y,  epochs = 3)
-
+ 
 y_pred2 = classifier.predict(z)
 y_pred2 = (y_pred2 > 0.5)
