@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 14 23:36:16 2018
-
-@author: abhinav
-"""
-
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -43,18 +34,3 @@ classifier.fit(x_train,y_train)
 test= [[1,1,1,1,1,1]]
 y_pred= classifier.predict(test)
 y_pred
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
